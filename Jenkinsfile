@@ -2,18 +2,11 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Hello') {
+        stage('Run Script') {
             steps {
-                echo 'Hello'
+                sh 'chmod +x hello.sh'
+                sh './hello.sh'
             }
         }
-
-        stage('World') {
-            steps {
-                echo 'World'
-            }
-        }
-
     }
 }
